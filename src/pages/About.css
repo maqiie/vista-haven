@@ -1,0 +1,78 @@
+.about-page { padding-bottom: 100px; }
+
+.about-hero {
+  padding: calc(var(--nav-h) + 80px) 32px 80px;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-hero__sub {
+  max-width: 600px;
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-top: 24px;
+}
+
+.about-body {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.about-story h2, .about-team h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.about-story p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.team-card img {
+  width: 56px; height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold-dim);
+}
+
+.team-card h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.team-card p {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .about-body { grid-template-columns: 1fr; gap: 48px; }
+  .about-hero { padding-left: 20px; padding-right: 20px; }
+}

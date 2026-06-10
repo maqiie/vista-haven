@@ -1,0 +1,112 @@
+.properties-hero {
+  padding: calc(var(--nav-h) + 60px) 0 60px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.properties-body {
+  padding-top: 48px;
+  padding-bottom: 100px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.filters__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-light);
+  padding: 10px 14px;
+  flex: 1;
+  min-width: 200px;
+  color: var(--text-muted);
+}
+
+.filters__search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  width: 100%;
+}
+
+.filters__search input::placeholder { color: var(--text-muted); }
+
+.filters__group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--text-muted);
+}
+
+.filter-btn {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  background: transparent;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+}
+
+.filter-btn:hover { border-color: var(--gold-dim); color: var(--text-primary); }
+
+.filter-btn--active {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+  font-weight: 600;
+}
+
+.results-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--text-muted);
+}
+
+.no-results button {
+  margin-top: 16px;
+  padding: 10px 24px;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.no-results button:hover { background: var(--gold-glow); }
+
+@media (max-width: 1024px) { .properties-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .properties-grid { grid-template-columns: 1fr; } }
